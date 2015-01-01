@@ -22,7 +22,7 @@ class App.Routers.MainRouter extends Backbone.Router
 
   newProject: ->
     @layoutViews()
-    @contentView.swapMain(new App.Views.NewProject({model: App.Models.Project}))
+    @contentView.swapMain(new App.Views.NewProject({model: new App.Models.Project}))
     @contentView.swapSide(new App.Views.Projects({collection: new App.Collections.Projects}))
 
   layoutViews: ->
