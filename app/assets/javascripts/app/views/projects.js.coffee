@@ -2,6 +2,12 @@ class App.Views.Projects extends Backbone.View
 
   template: HandlebarsTemplates['projects']
 
+  events:
+    'click .btn': 'newProject'
+
+  newProject: ->
+
+
   initialize: ->
     @listenTo @collection, "reset", @render
     @collection.fetch({reset: true})
