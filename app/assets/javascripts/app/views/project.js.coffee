@@ -5,6 +5,9 @@ class App.Views.Project extends Backbone.View
   events:
     "click a": "showDetails"
 
+  initialize: ->
+    @listenTo @model, 'destroy', @remove
+
   showDetails: (e) ->
     e.preventDefault()
     App.Vent.trigger "project:show", @model

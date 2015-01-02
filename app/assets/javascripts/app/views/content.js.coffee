@@ -11,6 +11,7 @@ class App.Views.Content extends Backbone.View
     @listenTo App.Vent, "project:create", @renderEmpyView
     @listenTo App.Vent, "project:new", @renderNewProjectView
     @listenTo App.Vent, "project:show", @renderProjectDetails
+    @listenTo App.Vent, "project:destroy", @renderEmpyView
 
   renderProjectDetails: (model) ->
     @swapMain(new App.Views.ProjectDetails({model: model}))
